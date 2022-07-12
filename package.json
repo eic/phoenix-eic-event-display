@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "phoenix-event-display": "^2.9.0",
+    "phoenix-ui-components": "^2.9.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -26,7 +28,9 @@
     "@angular-devkit/build-angular": "^14.0.5",
     "@angular/cli": "~14.0.5",
     "@angular/compiler-cli": "^14.0.0",
+    "@types/dat.gui": "^0.7.7",
     "@types/jasmine": "~4.0.0",
+    "@types/three": "^0.141.0",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
