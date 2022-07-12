@@ -22,6 +22,9 @@ export class EicDetectorComponent implements OnInit {
   /** The root Phoenix menu node. */
   phoenixMenuRoot = new PhoenixMenuNode("Phoenix Menu");
 
+  loaded = false;
+  loadingProgress = 0;
+
   eventDataImportOptions: EventDataImportOption[] = [
     EventDataFormat.JSON,
     EventDataFormat.IG,
@@ -56,6 +59,15 @@ export class EicDetectorComponent implements OnInit {
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
     this.eventDisplay.loadGLTFGeometry('assets/eic.gltf', 'Detector');
+
+    this.eventDisplay
+      .getLoadingManager()
+      .addProgressListener((progress) => (this.loadingProgress = progress));
+
+    this.eventDisplay
+      .getLoadingManager()
+      .addLoadListenerWithCheck(() => (this.loaded = true));
+
   }
 
 }
