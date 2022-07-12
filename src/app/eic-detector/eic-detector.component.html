@@ -1,9 +1,11 @@
 <app-nav></app-nav>
 <!-- UI menu at the bottom -->
-<app-ui-menu>
-  <app-cycle-events [interval]="5000"></app-cycle-events>
-</app-ui-menu>
-<app-experiment-info experiment="eic-detector" experimentTagline="EIC Detector"></app-experiment-info>
+<app-ui-menu [eventDataImportOptions]="eventDataImportOptions"></app-ui-menu>
+<app-embed-menu></app-embed-menu>
+<app-experiment-info
+  experiment="eic-detector"
+  experimentTagline="EIC Detector"
+></app-experiment-info>
 <!-- Phoenix menu at the top right -->
 <app-phoenix-menu [rootNode]="phoenixMenuRoot"></app-phoenix-menu>
 <div id="eventDisplay"></div>

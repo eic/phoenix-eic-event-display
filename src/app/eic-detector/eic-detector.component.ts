@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  EventDataFormat,
+  EventDataImportOption,
   EventDisplayService,
 } from 'phoenix-ui-components';
 import {
@@ -20,6 +22,11 @@ export class EicDetectorComponent implements OnInit {
   /** The root Phoenix menu node. */
   phoenixMenuRoot = new PhoenixMenuNode("Phoenix Menu");
 
+  eventDataImportOptions: EventDataImportOption[] = [
+    EventDataFormat.JSON,
+    EventDataFormat.IG,
+  ];
+
   constructor(private eventDisplay: EventDisplayService) { }
 
   ngOnInit() {
@@ -39,7 +46,7 @@ export class EicDetectorComponent implements OnInit {
       // Event data to load by default
       defaultEventFile: {
         // (Assuming the file exists in the `src/assets` directory of the app)
-        eventFile: 'assets/jive_xml_event_data.xml',
+        eventFile: 'assets/event_data.xml',
         eventType: 'jivexml'
       },
     }
