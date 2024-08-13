@@ -1,5 +1,9 @@
 # Phoenix EIC Event Display
 
+## Migration
+
+⚠️ This project has migrated to https://github.com/eic/firebird. ⚠️
+
 ## Quickstart
 
 ### Create an EIC GLTF geometry file
